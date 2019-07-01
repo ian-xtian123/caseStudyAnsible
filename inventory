@@ -1,0 +1,11 @@
+[win]
+127.0.0.1
+
+[win:vars]
+ansible_user=ian
+ansible_password=devops
+ansible_connection=local
+ansible_become=true
+ansible_become_user=ian
+ansible_become_pass=devops
+

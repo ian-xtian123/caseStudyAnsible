@@ -1,0 +1,23 @@
+---
+- name: Delete site folder and contents
+  file: 
+    path: /mnt/c/sites/prod
+    state: absent
+
+- name: Recreate Directory
+  file:
+    path: /mnt/c/sites/prod
+    state: directory
+    mode: 0755
+
+- name: Download artifact
+  get_url:
+    url: http://localhost:8081/artifactory/generic-local/prod/caseStudy.{{version}}.zip
+    dest: /mnt/c/sites/prod/caseStudy.zip
+    mode: '0755'
+
+- name: Unzip artifact
+  unarchive:
+    src:  /mnt/c/sites/prod/caseStudy.zip
+    dest: /mnt/c/sites/prod
+    remote_src: yes

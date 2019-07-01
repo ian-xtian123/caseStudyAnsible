@@ -1,0 +1,4 @@
+---
+target-server: localhost
+user: myuser
+group: mygroup
