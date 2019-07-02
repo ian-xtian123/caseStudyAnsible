@@ -13,7 +13,7 @@
 - name: Download artifact
   get_url:
     url: http://localhost:8081/artifactory/generic-local/{{deployEnv}}/caseStudy.{{version}}.zip
-    dest: /mnt/c/sites/{{deployEnv}}/caseStudy.zip
+    dest: /mnt/c/sites/{{deployEnv}}/caseStudy.{{version}}.zip
     mode: '0755'
 
 - name: Unzip artifact
