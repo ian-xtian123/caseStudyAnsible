@@ -6,4 +6,4 @@
    - role_a
   vars:
     version: "{{version}}" 
-    environment: "{{environment}}"
+    environment: "{{deployEnv}}"
